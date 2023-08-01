@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .textured-button {
+      background-image: url('https://i.pinimg.com/originals/ee/f6/74/eef6748474a43105c8c40f3f9c394a14.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+      color: white;
+      padding: 50px 100px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .text {
+      font-size: 30px;
+      color: black;
+      top: 100px;
+      left:100px;
+    }   
+    .sidebar {
+      background-color: black;
+      width: 300px;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    body{
+        background-image: url('https://goodimages.ru/files/img/pics/raian-gosling/raian-gosling-25.webp');
+
+    }
+  </style>
+  
+</head>
+<body>
+  
+    <script>
+
+        alert( 'кароч наслаждайтесь прекрасным раяном гослингом и моими уебскими навыками в програмировании ' );
+
+      </script>
+        <div id="notification-container">
+          <p>Включить музыку для полного погружения?</p>
+          <button id="yes-button">Да</button>
+          <button id="no-button">Нет</button>
+        </div>
+        <audio id="background-music">
+          <source src="strashni musik.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+          document.body.addEventListener("pointermove", (e)=>{
+          const { currentTarget: el, clientX: x, clientY: y } = e;
+          const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+          el.style.setProperty('--posX',  x-l-w/2);
+          el.style.setProperty('--posY',  y-t-h/2);
+        })
+          </script>
+    <div class="text">раян гослинг</div>
+  <div class="sidebar">
+    <div class="button-container">
+      <button class="textured-button" onclick="showMessage()"><h1>жизнь</h1></button>
+
+<script>
+  function showMessage() {
+    alert("да я чо ебу как у него жизнь проходила сами прочитаите, мне лень");
+  }
+</script>
+      <br> <br> <br> <br> <br> <br> <br>
+      <button class="textured-button" onclick="showMessag()"><h1>фильмы</h1></button>
+
+<script>
+  function showMessag() {
+    alert("Барби, Дневник памяти, Бегущий по лезвию 2049, Игра на понижение, Ла-Ла Ленд, Драйв, Славные парни, Место под соснами, Отсчет убийств, Мартовские иды, Только Бог простит");
+  }
+</script>
+      <br> <br> <br> <br> <br> <br> <br>
+      <button  class="textured-button" onclick="redirectToPerplexity()"><h1>важно</h1></button>
+
+<script>
+  function redirectToPerplexity() {
+    window.location.href = "http://192.168.0.25:5500/sevalox.html";
+  }
+</script>
+<script src="musik.js"></script>
+    </div>
+  </div>
+</body>
+</html>
